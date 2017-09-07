@@ -31,8 +31,17 @@ public class InMemoryProductRepository implements ProductRepository {
     public List<Product> getAllProducts() {
 
         Map<String, Object> params = new HashMap<>();
-        List<Product> result = jdbcTemplate.query("SELECT *FROM products", params, new ProductMapper());
+        List<Product> result = jdbcTemplate.query("SELECT * FROM products", params, new ProductMapper());
         return result;
+    }
+
+    @Override
+    public void updateStock(String productId, long noOfUnits) {
+        String SQL = "UPDATE PRODUCTS SET UNITS_IN_STOCK = :unitsInStock WHERE ID = :id";
+        Map<String, Object> params = new HashMap<>();
+        params.put("unitsInStock", noOfUnits);
+        params.put("id", productId);
+        jdbcTemplate.update(SQL, params);
     }
 
     private static final class ProductMapper implements RowMapper<Product> {

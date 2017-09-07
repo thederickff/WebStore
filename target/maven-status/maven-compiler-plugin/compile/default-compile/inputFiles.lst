@@ -5,4 +5,6 @@
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/config/RootApplicationContextConfig.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/config/DispatcherServletInitializer.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/impl/InMemoryProductRepository.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/ProductService.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/config/WebApplicationContextConfig.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/impl/ProductServiceImpl.java

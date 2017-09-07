@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.packt.webstore.domain.repository;
+package com.packt.webstore.service;
 
 import com.packt.webstore.domain.Product;
 import java.util.List;
@@ -12,9 +12,9 @@ import java.util.List;
  *
  * @author derickfelix
  */
-public interface ProductRepository {
-
-    List<Product> getAllProducts();
-
-    void updateStock(String productId, long noOfUnits);
+public interface ProductService {
+    
+    void updateAllStock();
+    
+    List <Product> getAllProducts();
 }
