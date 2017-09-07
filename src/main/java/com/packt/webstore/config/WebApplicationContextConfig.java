@@ -37,10 +37,4 @@ public class WebApplicationContextConfig extends WebMvcConfigurerAdapter {
         resolver.setSuffix(".jsp");
         return resolver;
     }
-    
-    private AnnotationConfigWebApplicationContext getContext() {
-    AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-    context.register(getClass());
-    return context;
 }
-}   
