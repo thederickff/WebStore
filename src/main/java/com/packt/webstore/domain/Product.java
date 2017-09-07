@@ -27,7 +27,7 @@ public class Product implements Serializable {
     private long unitsInStock;
     private long unitsInOrder;
     
-    private boolean dicontinued;
+    private boolean discontinued;
     
     private String condition;
     
@@ -107,12 +107,12 @@ public class Product implements Serializable {
         this.unitsInOrder = unitsInOrder;
     }
 
-    public boolean isDicontinued() {
-        return dicontinued;
+    public boolean isDiscontinued() {
+        return discontinued;
     }
 
-    public void setDicontinued(boolean dicontinued) {
-        this.dicontinued = dicontinued;
+    public void setDicontinued(boolean discontinued) {
+        this.discontinued = discontinued;
     }
 
     public String getCondition() {
