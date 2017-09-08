@@ -9,6 +9,7 @@ import com.packt.webstore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author derickfelix
  */
 @Controller
+@RequestMapping("market")
 public class ProductController {
   
     @Autowired
@@ -30,7 +32,13 @@ public class ProductController {
     @RequestMapping("/update/stock")
     public String updateStock(Model model) {
         productService.updateAllStock();
-        return "redirect:/products";
+        return "redirect:/market/products";
     }
     
+    @RequestMapping("/products/{category}")
+    public String getProductsByCategory(Model model, 
+            @PathVariable("category") String productCategory) {
+        model.addAttribute("products", productService.getProductsByCategory(productCategory));
+        return "products";
+    }
 }
