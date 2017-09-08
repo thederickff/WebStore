@@ -49,8 +49,15 @@ public class InMemoryProductRepository implements ProductRepository {
         String SQL = "SELECT * FROM PRODUCTS WHERE CATEGORY = :category";
         Map<String, Object> params = new HashMap<>();
         params.put("category", category);
-        
+
         return jdbcTemplate.query(SQL, params, new ProductMapper());
+    }
+
+    @Override
+    public List<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
+        String SQL = "SELECT * FROM PRODUCTS WHERE CATEGORY IN (:categories ) AND MANUFACTURER IN ( :brands)";
+        
+        return jdbcTemplate.query(SQL, filterParams, new ProductMapper());
     }
 
     private static final class ProductMapper implements RowMapper<Product> {
