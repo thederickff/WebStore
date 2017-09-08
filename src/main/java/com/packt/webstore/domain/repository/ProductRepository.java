@@ -21,5 +21,7 @@ public interface ProductRepository {
 
     List<Product> getProductsByFilter(Map<String, List<String>>  filterParams);
     
+    List<Product> getProductById(String productId);
+    
     void updateStock(String productId, long noOfUnits);
 }

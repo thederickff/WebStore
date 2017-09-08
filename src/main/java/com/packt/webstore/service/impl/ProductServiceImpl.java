@@ -50,4 +50,9 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.getProductsByFilter(filterParams);
     }
 
+    @Override
+    public List<Product> getProductById(String productId) {
+        return productRepository.getProductById(productId);
+    }
+
 }
