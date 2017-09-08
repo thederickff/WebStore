@@ -19,28 +19,17 @@ import org.springframework.stereotype.Repository;
 public class InMemoryCustomerRepository implements CustomerRepository {
 
     private NamedParameterJdbcTemplate jdbcTemplate;
-    private Customer[] customers;
-    
-    public InMemoryCustomerRepository() {
-        customers = new Customer[3];
-        customers[0] = new Customer("1", "Derick", "1st street");
-        customers[0].setNoOfOrdersMade(3);
-        
-        customers[1] = new Customer("2", "Gary", "3rd street");
-        customers[1].setNoOfOrdersMade(2);
-        
-        customers[2] = new Customer("3", "Mark", "2rd street");
-        customers[2].setNoOfOrdersMade(4);
-        
-    }
+
+
     @Override
     public List<Customer> getAllCustomers() {
-        
-        List<Customer> result = null;
+
+        /*  List<Customer> result = null;
         result.add(customers[0]);
         result.add(customers[1]);
         result.add(customers[2]);
-        return result;
+         */
+        return null;
     }
-    
+
 }

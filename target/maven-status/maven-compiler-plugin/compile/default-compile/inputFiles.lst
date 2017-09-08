@@ -1,10 +1,16 @@
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/HomeController.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/ProductController.java
-/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/Product.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/impl/CustomerServiceImpl.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/ProductRepository.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/config/RootApplicationContextConfig.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/config/DispatcherServletInitializer.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/impl/InMemoryProductRepository.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/ProductService.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/config/WebApplicationContextConfig.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/Customer.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/Product.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/CustomerService.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/CustomerRepository.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/impl/InMemoryCustomerRepository.java
+/home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/CustomerController.java
 /home/derickfelix/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/impl/ProductServiceImpl.java
