@@ -23,5 +23,7 @@ public interface ProductRepository {
     
     List<Product> getProductById(String productId);
     
+    void addProduct(Product product);
+    
     void updateStock(String productId, long noOfUnits);
 }

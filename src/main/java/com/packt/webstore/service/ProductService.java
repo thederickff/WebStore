@@ -15,6 +15,8 @@ import java.util.Map;
  */
 public interface ProductService {
 
+    void addProduct(Product product);
+    
     void updateAllStock();
 
     List<Product> getAllProducts();
