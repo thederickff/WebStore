@@ -7,6 +7,7 @@ package com.packt.webstore.domain.repository.impl;
 
 import com.packt.webstore.domain.Customer;
 import com.packt.webstore.domain.repository.CustomerRepository;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -23,13 +24,22 @@ public class InMemoryCustomerRepository implements CustomerRepository {
 
     @Override
     public List<Customer> getAllCustomers() {
-
-        /*  List<Customer> result = null;
-        result.add(customers[0]);
-        result.add(customers[1]);
-        result.add(customers[2]);
-         */
-        return null;
+        Customer c1 = new Customer("1", "Will Myer", "3244 South 23rd Street");
+        c1.setNoOfOrdersMade(34L);
+        Customer c2 = new Customer("2", "Steve Wyun", "3741 East 12nd Street");
+        c2.setNoOfOrdersMade(7L);
+        Customer c3 = new Customer("3", "Mart Luke", "9283 South 1st Street");
+        c3.setNoOfOrdersMade(18L);
+        Customer c4 = new Customer("4", "McBob Garand", "1637 North 4th Street");
+        c4.setNoOfOrdersMade(9L);
+        
+        List<Customer> customers = new ArrayList<>();
+        customers.add(c1);
+        customers.add(c2);
+        customers.add(c3);
+        customers.add(c4);
+        
+        return customers;
     }
 
 }

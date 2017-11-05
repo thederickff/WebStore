@@ -20,7 +20,6 @@ public class Customer {
     private long noOfOrdersMade;
     
     public Customer() {
-        super();
     }
 
     public Customer(String customerId, String name, String address) {

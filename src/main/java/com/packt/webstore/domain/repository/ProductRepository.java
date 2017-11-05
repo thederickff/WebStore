@@ -21,7 +21,7 @@ public interface ProductRepository {
 
     List<Product> getProductsByFilter(Map<String, List<String>>  filterParams);
     
-    List<Product> getProductById(String productId);
+    Product getProductById(String productId);
     
     void addProduct(Product product);
     

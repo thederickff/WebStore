@@ -13,5 +13,6 @@ import java.util.List;
  * @author derickfelix
  */
 public interface CustomerService {
-    List <Customer> getAllCustomers();
+
+    List<Customer> getAllCustomers();
 }

@@ -7,6 +7,8 @@ package com.packt.webstore.controller;
 
 import com.packt.webstore.domain.Product;
 import com.packt.webstore.service.ProductService;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,21 +59,31 @@ public class ProductController {
 
     @RequestMapping("/product")
     public String getProductById(@RequestParam("id") String productId, Model model) {
-        model.addAttribute("products", productService.getProductById(productId));
+        model.addAttribute("product", productService.getProductById(productId));
         return "product";
     }
-    
+
     @RequestMapping(value = "/products/add", method = RequestMethod.GET)
     public String getAddNewProductForm(Model model) {
         Product product = new Product();
         model.addAttribute("newProduct", product);
-        
+
         return "addProduct";
     }
-    
+
     @RequestMapping(value = "/products/add", method = RequestMethod.POST)
     public String postAddNewProductForm(@ModelAttribute("newProduct") Product newProduct) {
         productService.addProduct(newProduct);
         return "redirect:/market/products";
+    }
+
+    @RequestMapping(value = "/products/{category}/{price}")
+    public String filterProducts(@PathVariable("category") String category,
+            @MatrixVariable(pathVar = "price") Map<String, List<String>> params,
+            @RequestParam("brand") String brand,
+            Model model) {
+
+        model.addAttribute("products", this.productService.filterProducts(category, params, brand));
+        return "products";
     }
 }

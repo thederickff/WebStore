@@ -24,48 +24,46 @@
               crossorigin="anonymous">
     </head>
     <body>
-        <c:forEach items="${products}" var="product">
-            <section>
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1>Products</h1>
-                        <p>${product.name}</p>
-                    </div>
+        <section>
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Products</h1>
+                    <p>${product.name}</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                        <p>
-                            <strong>Item Code: </strong>
-                            <span class="label label-warning">${product.productId}</span>
-                        </p>
-                        <p>
-                            <strong>Manufacturer: </strong>
-                            ${product.manufacturer}
-                        </p>
-                        <p>
-                            <strong>Available units in stock </strong> :
-                            ${product.unitsInStock}
-                        </p>
-                        <h4>${product.unitPrice} USD</h4>
-                        <p>
-                            <a href="<spring:url value="/market/products" />" class="btn
-                               btn-default">
-                                <span class="glyphicon-hand-left glyphicon"></span> back
-                            </a>
-                            <a href="" class="btn btn-warning btn-large">
-                                <span class="glyphicon-shopping-cart glyphicon">
-                                </span> Order Now
-                            </a>
-                        </p>
-                    </div>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p>
+                        <strong>Item Code: </strong>
+                        <span class="label label-warning">${product.productId}</span>
+                    </p>
+                    <p>
+                        <strong>Manufacturer: </strong>
+                        ${product.manufacturer}
+                    </p>
+                    <p>
+                        <strong>Available units in stock </strong> :
+                        ${product.unitsInStock}
+                    </p>
+                    <h4>${product.unitPrice} USD</h4>
+                    <p>
+                        <a href="<spring:url value="/market/products" />" class="btn
+                           btn-default">
+                            <span class="glyphicon-hand-left glyphicon"></span> back
+                        </a>
+                        <a href="" class="btn btn-warning btn-large">
+                            <span class="glyphicon-shopping-cart glyphicon">
+                            </span> Order Now
+                        </a>
+                    </p>
                 </div>
-            </section>
-        </c:forEach>
+            </div>
+        </section>
     </body>
 </html>
 
