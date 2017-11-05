@@ -59,6 +59,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void addProduct(Product product) {
+        product.setProductId("P" + Integer.toString((int) (product.getUnitPrice().doubleValue() * 34) / 30));
         productRepository.addProduct(product);
     }
 

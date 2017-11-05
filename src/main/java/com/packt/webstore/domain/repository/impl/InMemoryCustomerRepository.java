@@ -20,10 +20,10 @@ import org.springframework.stereotype.Repository;
 public class InMemoryCustomerRepository implements CustomerRepository {
 
     private NamedParameterJdbcTemplate jdbcTemplate;
+    private List<Customer> customers;
 
-
-    @Override
-    public List<Customer> getAllCustomers() {
+    public InMemoryCustomerRepository() {
+        customers = new ArrayList<>();
         Customer c1 = new Customer("1", "Will Myer", "3244 South 23rd Street");
         c1.setNoOfOrdersMade(34L);
         Customer c2 = new Customer("2", "Steve Wyun", "3741 East 12nd Street");
@@ -32,14 +32,20 @@ public class InMemoryCustomerRepository implements CustomerRepository {
         c3.setNoOfOrdersMade(18L);
         Customer c4 = new Customer("4", "McBob Garand", "1637 North 4th Street");
         c4.setNoOfOrdersMade(9L);
-        
-        List<Customer> customers = new ArrayList<>();
         customers.add(c1);
         customers.add(c2);
         customers.add(c3);
         customers.add(c4);
-        
+    }
+
+    @Override
+    public List<Customer> getAllCustomers() {
         return customers;
+    }
+
+    @Override
+    public void addCustomer(Customer customer) {
+        customers.add(customer);
     }
 
 }
